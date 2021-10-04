@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Iphone Purchase Predictor</title>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width,initial-scale = 1.0">
+    </head>
+    
+    <body>
+        <h1>IPHONE PURCHASE PREDICTION</h1><br>
+        <div style = "color:brown"; >
+            <form action = "{{ url_for('predict') }}" method= "post">
+                <h2>GENDER</h2>
+                <select name = "Gender" id = "first">
+                    <option value = "Male">Male</option>
+                    <option value = "Female">Female</option>
+                </select>
+
+                <h2>AGE</h2>
+                <input id = "second" name = "Age" required = "required" type = "number">
+                
+                <h2>SALARY</h2>
+                <input id = "third" name = "Salary" required = "required" type = "number">
+                <br><br>
+                
+                <button id = "sub" type="submit">CALCULATE</button>
+                
+            </form>
+
+            <h2><strong>{{ prediction_texts }}</strong><h2>
+
+        </div>
+        
+        <style>
+            body {
+                background-color: rgb(247, 148, 137);
+                height: auto;
+                background-position: center;
+                background-repeat: no-repeat;
+                text-align: center;
+            }
+            #research {
+                font-size: 20px;
+                width: auto;
+                height: 30px;
+                top: 30px;
+                border-radius: 14px;
+                text-align: center;
+            }
+
+            #research:hover {
+                background-color: thistle;
+            }
+
+            #box {
+                border-radius: 60px;
+                border-color: slategrey;
+                border-style: dotted;
+                text-align: center;
+                background-color: whitesmoke;
+                font-size: medium;
+                position: absolute;
+                width: 700px;
+                bottom: 9%;
+                height: 850px;
+                right: 30%;
+                padding: 0px;
+                margin: 0px;
+                font-size: 14px;
+            }
+
+            #fuel {
+                width: auto;
+                height: auto;
+                text-align: center;
+                border-radius: 20px;
+                font-size: 20px;
+            }
+
+            #fuel:hover {
+                background-color: thistle;
+            }
+
+            #research_1 {
+                width:auto;
+                height: auto;
+                text-align: center;
+                font-size: 20px;
+                border-radius: 20px;
+            }
+
+            #research_1:hover {
+                background-color: thistle;
+            }
+
+            #sub {
+                width: 150px;
+                height: 30px;
+                text-align: center;
+                border-radius: 20pc;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            #sub:hover {
+                background-color: violet;
+            }
+
+            #first {
+                font-size: 20px;
+                text-align: center;
+                height: auto;
+                width: auto;
+                border-style: ridge;
+            }
+
+            #second {
+                font-size: 20px;
+                text-align: center;
+                height: auto;
+                width: auto;
+                border-style: ridge;
+            }
+
+            #third {
+                font-size: 20px;
+                text-align: center;
+                height: auto;
+                width: auto;
+                border-style: ridge;
+            }
+
+        </style>
+
+    </body>
+</html>
