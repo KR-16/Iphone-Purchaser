@@ -47,7 +47,6 @@
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            bottom: 30px;
             transition: background-color 0.3s ease;
         }
         
@@ -62,7 +61,7 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 20px;
+            bottom: 50%;
             width: 100%;
         }
         
@@ -94,24 +93,6 @@
 
 <body>
     <h1>IPHONE PURCHASE PREDICTION</h1>
-    <div>
-        <form action="/predict" method="post">
-            <label for="gender">GENDER</label>
-            <select name="Gender" id="gender">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-            </select>
-
-            <label for="age">AGE</label>
-            <input id="age" name="Age" required="required" type="number">
-
-            <label for="salary">SALARY</label>
-            <input id="salary" name="Salary" required="required" type="number">
-
-            <button type="submit">CALCULATE</button>
-        </form>
-
-        {% if prediction_texts and image %}
 
         <div class="left">
             <img src="{{ image }}" alt="Image" style="max-width: 100%; " class="left">
@@ -124,8 +105,7 @@
         <div id="prediction-texts">
             <strong>{{ prediction_texts }}</strong>
         </div>
-
-        {% endif %}
+        <a href="/" class="previous-page">Main Page</a>
     </div>
 </body>
 </html>

@@ -32,9 +32,9 @@ def predict():
         prediction = model.predict([[Gender,Age,Salary]])
 
         if prediction == 0:
-            return render_template("main.html",prediction_texts = "Not an Iphone purchaser")
+            return render_template("result.html",prediction_texts = "Not an Iphone purchaser", image = "static\otherphone.jpg")
         else:
-            return render_template("main.html",prediction_texts = "Iphone purchaser")
+            return render_template("result.html",prediction_texts = "Iphone purchaser", image = "static\iphone.jpg")
 
 
 if __name__ == "__main__":
