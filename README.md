@@ -25,7 +25,7 @@ The Flask application is hosted at localhost:5000. You can make predictions by e
 * Age
 * Salary
 
-The Flask application will then use the decision tree classifier model to predict the price of the car.
+The Flask application will then use the decision tree classifier model to predict the iphone purchaser.
 
 
 
